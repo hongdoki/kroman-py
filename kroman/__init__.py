@@ -1,15 +1,18 @@
+# !/usr/bin/python
+# -*- coding: utf-8
+
 import sys, math
 
 head_jamos = [
     'g', #ㄱ
-    'gg', #ㄲ
+    'kk', #ㄲ
     'n', #ㄴ
     'd', #ㄷ
-    'dd', #ㄸ
+    'tt', #ㄸ
     'r', #ㄹ
     'm', #ㅁ
     'b', #ㅂ
-    'bb', #ㅃ
+    'pp', #ㅃ
     's', #ㅅ
     'ss', #ㅆ
     '',
@@ -37,44 +40,44 @@ body_jamos = [
     'oe', # ㅚ
     'yo', # ㅛ
     'u', # ㅜ
-    'weo', # ㅝ
+    'wo', # ㅝ
     'we', # ㅞ
     'wi', # ㅟ
     'yu', # ㅠ
     'eu', # ㅡ
-    'eui', # ㅢ
+    'ui', # ㅢ
     'i' # ㅣ
 ]
 
 tail_jamos = [
     '',
-    'g', # ㄱ
-    'gg', # ㄲ
-    'gs', # ㄱㅅ
+    'k', # ㄱ
+    'kk', # ㄲ
+    'ks', # ㄱㅅ
     'n', # ㄴ
     'nj', # ㄴㅈ 
     'nh', # ㄴㅎ
-    'd', # ㄷ
+    't', # ㄷ
     'l', # ㄹ
-    'rk', # ㄹㄱ
-    'rm', # ㄹㅁ
-    'rb', # ㄹㅂ
-    'rs', # ㄹㅅ
-    'rt', # ㄹㅌ
-    'rp', # ㄹㅍ
-    'rh', # ㄹㅎ
+    'lg', # ㄹㄱ
+    'lm', # ㄹㅁ
+    'lb', # ㄹㅂ
+    'ls', # ㄹㅅ
+    'lt', # ㄹㅌ
+    'lp', # ㄹㅍ
+    'lh', # ㄹㅎ
     'm', # ㅁ
-    'b', # ㅂ
-    'bs', # ㅂㅅ
-    's', # ㅅ
-    'ss', # ㅆ
+    'p', # ㅂ
+    'ps', # ㅂㅅ
+    't', # ㅅ
+    't', # ㅆ
     'ng', # ㅇ
-    'j', # ㅈ
-    'ch', # ㅊ
+    't', # ㅈ
+    't', # ㅊ
     'k', # ㅋ
     't', # ㅌ
     'p', # ㅍ
-    'h' # ㅎ
+    't' # ㅎ
 ]
 
 
@@ -96,7 +99,7 @@ def parse(text):
             body = int(math.floor(headl / interval_body))
             tail = int(math.floor(headl % interval_body))
             if last_char_is_hangul:
-                retval += '-'
+                retval += ''
             retval += head_jamos[head]
             retval += body_jamos[body]
             retval += tail_jamos[tail]
